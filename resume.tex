@@ -1,0 +1,254 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plasmati Graduate CV
+% LaTeX Template
+% Version 1.0 (24/3/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati (alessandro.plasmati@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creivecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template needs to be compiled with XeLaTeX.
+% The main document font is called Fontin and can be downloaded for free
+% from here: http://www.exljbris.com/fontin.html
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,10pt]{extarticle} % Default font size and paper size
+
+\usepackage{fontspec} % For loading fonts
+\defaultfontfeatures{Mapping=tex-text}
+% \setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
+% \fontspec{[FontAwesome.otf]}
+\setmainfont[Path = ./Ubuntu/,  %% Optional; but UPDATE this if 
+                                %% your font files are in a folder
+ Extension = .ttf,
+ UprightFont = *-Regular,
+ BoldFont = *-Bold,
+ ItalicFont = *-Italic,
+ SmallCapsFont = *-Medium]
+{Ubuntu}
+\fontspec{[fontawesome-webfont.ttf]}
+
+\usepackage{color}
+\definecolor{primary}{rgb}{0.4, 0, 0.1}
+\definecolor{secondary}{rgb}{0, 0, 0}
+
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+
+%\usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be 
+%\usepackage{fullpage}
+\usepackage{geometry}
+\geometry{a4paper,margin=0.40cm}
+%\geometry{a4paper,left=20mm, top=20mm}
+ %To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\definecolor{linkcolour}{rgb}{0,0.4,0.5} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{0pt}{0pt} % Spacing around sections
+
+\usepackage{multicol}
+\setlength{\columnsep}{0cm}
+
+\usepackage{tabularx}
+
+\usepackage{textcomp}
+
+\usepackage{fontawesome}
+
+\usepackage{enumitem}
+\setlist[description]{%
+  topsep=10pt,               % space before start / after end of list
+  itemsep=1pt,               % space between items
+%  font={\bfseries\sffamily\color{red}}, % if colour is needed
+}
+
+\def\arraystretch{1}
+\renewcommand{\baselinestretch}{1.1}
+
+\begin{document}
+
+\pagestyle{empty} % Removes page numbering
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+\begin{multicols}{3}
+
+\normalsize  \faGlobe\ {\href{https://harshmax.vercel.app/}{\  harshmax.vercel.app}}\\
+\normalsize \faGithub\ {\href{https://github.com/Harsh-cyber005}{\  GitHub}}\\
+\columnbreak
+\normalsize\par{\centering{\huge\textsc{\textcolor{primary}{Harsh Gupta}}}\par} 
+\par{\centering\normalsize {\textsc{Jamshedpur, India}}\hfill\par}
+\columnbreak
+\raggedright\hfill\normalsize \faEnvelope\ {\href{mailto:harshxgupta931@gmail.com}{\  harshxgupta931@gmail.com}}\\
+\raggedright\hfill\normalsize \faLinkedinSquare\ {\href{https://www.linkedin.com/in/harshmax-dev}{\  LinkedIn}}\\
+\end{multicols}
+\vspace{-0.4 cm}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{\textcolor{primary}{Academics}}
+\vspace{+0.1cm}
+
+\begin{tabular}{r|p{17.5cm}}	
+
+ \textbf{2022-present} & B.Tech. + M.Tech. in \textit{Mechanical Engineering} - \textbf{Indian Institute of Technology, Kharagpur}\\
+ \hfill CGPA & \textbf{8.22}\\
+
+ %-- No One cares about it after seeing IIT Kharagpur ---
+ % \textbf{2021} & \textit{Joint Entrance Examination}, \textbf{Advanced}\\
+ % \hfill AIR & \textbf{3884}\\
+ % \textbf{2020} & \textit{Higher Secondary School Certificate Examination}, \textbf{CBSE}\\
+ % \hfill Percentage & \textbf{95\%}\\
+ % \textbf{2018} & \textit{Secondary School Certificate Examination}, \textbf{CBSE}\\
+ % \hfill Percentage & \textbf{96.4\%} \\
+ %------
+ 
+\end{tabular}
+
+% ----------------------------------------------------------------------------------------
+% 	EXPERIENCE
+% ----------------------------------------------------------------------------------------
+% \vspace{+0.2cm}
+% \section{\textcolor{primary}{Experience}}
+% \vspace{+0.1cm}
+
+% \begin{tabularx}{\linewidth}{ l | X }
+
+% \textsc{Apr '24} & \textbf{Software Engineering Intern: {\href{https://awsmo.ai/}{\ AWSMO}}}\hfill\textbf{Remote} \\
+% \textsc{Present} & {- Implemented \textbf{CI/CD pipelines} using \textbf{GitHub Actions} for all services, 
+%                  featuring post-deployment health checks \& \textbf{rollback on failure}, ensuring $\simeq$40\% less downtime \& maintaining system integrity across the deployment lifecycle. } \\
+%                  & {- Orchestrated multi-service architecture using \textbf{Terraform}, automating infrastructure management \& deployment.} \\
+%                  & {- Implemented business logic in \textbf{Django Rest Framework}, streamlined ML training, utilized \textbf{AWS Batch} for \textit{55\%} faster execution, and \textbf{AWS CloudFormation}, enhancing overall workflow automation and scalability} by over \textit{50\%}. \\
+%                  & {- Developed a custom \textit{stress testing framework} using \textbf{Golang}, \textbf{Python}, and \textbf{Terraform} to simulate various load patterns on servers, improving \textbf{testing efficiency by 50\%} and identifying \textbf{20 critical bottlenecks} across all services.} \\
+
+% \multicolumn{2}{c}{} \\
+% \end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	Awards
+%----------------------------------------------------------------------------------------
+ \vspace{-0.1cm}
+\section{\textcolor{primary}{Awards}}
+ \vspace{0.1cm}
+% \fontsize{9}{12}\selectfont{
+\begin{description}[style=nextline, font=$\bullet$\hspace{2mm}\normalsize]
+
+ \item[{\href{https://interiit-tech.com/}{InterIIT Tech Meet 13.0}} | Contingent Gold ] 
+- Secured overall \textbf{first place consecutively for the fourth time} in the InterIIT Tech Meet 13.0 as a team held by IIT Bombay \newline
+- Participated in \textbf{2 events} as a developer in the team, working on \textbf{backend}, \textbf{cloud systems architecture} and \textbf{frontend} \newline
+- Developed novel applications using \textbf{noVNC and Replicate}; \textbf{Leveraged} \href{https://nextjs.org/docs/pages/building-your-application/routing/api-routes}{\textbf{Next API}} to recieve images into frontend \newline
+- Implemented \textbf{CI/CD} automation for custom-built backends supporting two major events, enabling continuous delivery
+\end{description}
+% }
+
+%----------------------------------------------------------------------------------------
+%	Projects
+%----------------------------------------------------------------------------------------
+ \vspace{-0.1cm}
+\section{\textcolor{primary}{Projects}}
+ \vspace{0.1cm}
+% \fontsize{9}{12}\selectfont{
+\begin{description}[style=nextline, font=$\bullet$\hspace{2mm}\normalsize]
+
+ \item[{\href{https://second-brain-chi.vercel.app/}{Second Brain app}} | Next js, Node js, Typescript, MongoDB, Vector Search ] 
+- Developed \textbf{official web app for Production} centralizing your important links, youtube videos, tweets, and much more \newline
+- Managed Integration of \textbf{Hugging Face Transformer} with \textbf{Node js, MongoDB} \& \textbf{Typescript}, implementing \textbf{Vector Search} \newline
+- Built features: \textbf{Add content} \& \textbf{Delete Content}; Handled the backend though \textbf{Node + Express REST } \& \textbf{Next JS frontend} \newline
+- Constructed the \textbf{Share Brain Feature} and its \textbf{system design} and \textbf{UI design}, driving the process for Sharing Content\newline
+- Implemented \textbf{JWT Authentication} for Secured Signup and Login using \textbf{JWT, Axios Library} and proper \textbf{Status Codes}
+
+\item[{\href{https://movix-client-react.vercel.app/}{Movix Prime}} | React, NodeJS, Express, MongoDB, AWS, Docker] 
+- Developed \textbf{official Web App for GC Opensoft} centralizing authentication, search, video playback and other features\newline
+- Managed deployment on \textbf{AWS EC2} for backend and \textbf{vercel} for frontend \newline
+- Controlled \textbf{HLS Adaptive Video Streaming} through \textbf{AWS S3 Bucket} utilising \textbf{ffmpeg} \textbf{commands} in \textbf{Docker} Containers \newline
+- Built features: \textbf{sematic search} \& \textbf{fuzzy search}; worked in a team developing \textbf{Express REST backend} \& \textbf{React frontend} \newline
+- Constructed the \textbf{authentication components} and oversaw system and UI design, and drove the overall technical process.  \newline
+- Implemented \textbf{subscriptions model} feature using \textbf{React, Node} and \textbf{Express} and the checkout page using \textbf{RazorPay}
+
+ \item[{\href{https://github.com/Harsh-cyber005/Code-Pusher.git}{Code Pusher}} | Typescript, Git, VSCode] 
+- Developed for VSCode Users, streamlining periodic \textbf{compitting and Pushing of code} to their Remote Github Repositories \newline
+- Provided convenient installation by making the tool readily available on \textbf{Visual Studio Code Marketplace} and \textbf{Github} \newline
+- Implemented maintaining a \textbf{log file} of the commits and pushes, guaranteeing a record of the changes with date and time \newline
+- Integrated \textbf{VS Code keybindings}, optimizing the \textbf{starting} and \textbf{stopping} of \textbf{commits}, and finally Pushing code to Github \newline
+- Integrated an \textbf{Configuration based Input}, enabling users to set the \textbf{gap} between commits and \textbf{Remote Alias and Branch}
+
+ \item[{\href{https://github.com/Harsh-cyber005/chip8.git}{Chip 8 Emulator}} | C++, SFML, Make] 
+- Developed an Emulator for the \textbf{Chip-8 Virtual Machine} using \textbf{C++} and \textbf{SFML Graphics Library} and packaged into an exe\newline
+- Implemented a \textbf{Virtual Monitor}, \textbf{Keyboard}, \textbf{Speakers}, and \textbf{Virtual CPU} in C++ and \textbf{STL} Library and Using OOP principles \newline
+- Implemented the exact opcodes and memory management as provided in the \href{https://github.com/mattmikolay/chip-8/wiki/CHIP%E2%80%908-Technical-Reference}{Chip 8 Technical Reference} using STL
+ 
+\end{description}
+% }
+
+%----------------------------------------------------------------------------------------
+%	Position of Responsibility
+%----------------------------------------------------------------------------------------
+\vspace{-0.1cm}
+ \section{\textcolor{primary}{Positions of Responsibility}}
+\vspace{+0.2cm}
+
+\begin{itemize}[leftmargin=0.55cm, rightmargin=0.2cm, label={\Large\textbullet}]
+
+\item \textbf{Development Head | \href{https://www.linkedin.com/company/devsoc-iitkgp/posts/?feedView=all}{Developers' Society, Technology Students' Gymkhana, IIT Kharagpur}}\\
+- Oversaw \textbf{technological advancements} \& led a \textbf{tech team of developers} at IIT Kharagpur; maintaining multiple projects \\
+- Assisted in developing and maintaining the \href{https://www.linkedin.com/company/devsoc-iitkgp/posts/?feedView=all}{\textbf{website}} of the Society and helped nurture development culture in the campus \\
+- Assisted Technology Student's Gymkhana in conducting offline seminars and hackathons related to Software Development\\
+
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS 
+%----------------------------------------------------------------------------------------
+ \vspace{+0.4cm} \section{\textcolor{primary}
+ {\href{}{Technical Skills}}}
+ \vspace{+0.2cm}
+
+ \begin{tabular}{r|p{15cm}}
+ \textsc{Languages} & Golang, Python, Bash, Typescript, JavaScript, C/C++, HTML, CSS\\
+ \textsc{Frameworks} & Go-Fiber, Flask, Django, Node.js, Express.js \\
+ \textsc{DBMS} & PostgreSQL, MongoDB, MySQL \\
+ \textsc{DevOps} & Computer Networking, Docker, Nginx, Linux System Administration, Amazon Web Services (AWS), Redis, Github Actions \\
+ \textsc{OS Platforms} & Linux 5/6 (Ubuntu) \& Windows 7,8,10,11 \\
+ \textsc{Competitive} & Competitive Programming, Data Structures and Algorithms, Leetcode 250+ Problems \\
+ \textsc{Others} & Git, GitHub, Backend Development Methodologies, Web Browser Extension Development, VSCode Extension Development, Object Oriented Programming, Computer Architecture, Compiler Design and Operating Systems \\
+ 
+ % -------- ToAdd but not confident enough -----------
+ %  React.js, Data Structures and Algorithms
+ % ----------
+ 
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	COURSEWORK
+%----------------------------------------------------------------------------------------
+
+% --- Have better Activities & Leadership section
+ % \vspace{+0.2cm}
+ % \section{\textcolor{primary}{Relevant Coursework}
+ % \hfill\small\textsc{(T)heory and (L)aboratory}}
+ % \vspace{+0.1cm}
+
+ % \begin{tabular}{r|p{15cm}}
+ % \textsc{Completed} & \href{https://github.com/proffapt/iitkgp-pds-lab }{Programming And Data Structures (T/L)} | Advanced Calculus (T) | Transform Calculus (T) | Linear Algebra, Numerical and Complex Analysis (T) | Probability and Statistics (T) | Operations Research-I (T) | Operations Research-II (T/L) | Simulation (T/L) | Machine Learning Foundation and Applications (T/L)
+ % \end{tabular}
+ %------
+
+\end{document}
